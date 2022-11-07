@@ -1,0 +1,37 @@
+* {
+    font-family: 'Song Myung', serif;
+}
+
+.makeup {
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgb(193, 193, 193);
+    border-radius: 5px;
+}
+.makeup:hover {
+    opacity: 0.5;
+}
+/*? 스타일 넣고 싶은 td에만 클래스를 일일이 같은 이름으로 넣어줬는데 */
+/*? class 안 넣고 전체 td에 스타일 넣고 특정 td만 적용 해제하는 건 안 되는지?? */
+/*! 요약: 특정 마크업에 스타일 '해제' 불가능한지 */
+
+input {
+    font-size: 1.8rem;
+    border: none;
+}
+/* input 선택했을 때 강조되는 효과(focus) 없애기 */
+input:focus {
+    outline: none;
+}
+
+.results {
+    border-bottom: 1px solid black;
+}
+/*? margin을 넣어주고 싶은데 적용이 안 됨 */
+
+/* placeholder 선택자 */
+::placeholder {
+    font-size: 1rem;
+}
