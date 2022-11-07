@@ -27,14 +27,14 @@ body {
 .output {
     background-color: rgba(255, 255, 255, 50%);
     height: 60px;
-    width: 265px;
-    border: 1px solid black;
+    width: 256px;
+
     margin-top: 10px;
     padding: 5px;
 }
 .input {
     width: 100%;
-    border: 1px solid black;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -52,15 +52,17 @@ button {
     all: unset;
     width: 60px;
     height: 60px;
-    border: 1px solid black;
     text-align: center;
     border-radius: 5px;
 }
 .btn {
     background-color: rgba(255, 255, 255, 50%);
     backdrop-filter: blur(10px);
-    transition: background-color 0.5s;
+    transition: background-color 0.3s;
 }
 .btn:hover {
     background-color: rgba(255, 255, 255);
+}
+.btn:active {
+    background-color: rgba(255, 255, 255, 50%);
 }
