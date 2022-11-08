@@ -1,0 +1,33 @@
+.box {
+  width: 430px;
+  height: 560px;
+  border: solid 2px black;
+
+  padding-bottom: 15px;
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.result {
+  width: 378px;
+  height: 90px;
+  border: solid 2px black;
+
+  border-radius: 6px;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+
+.button {
+  width: 90px;
+  height: 56px;
+  border: solid 2px black;
+
+  border-radius: 6px;
+  padding-top: 28px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 19px;
+}
