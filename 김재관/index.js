@@ -4,6 +4,7 @@ const result = document.querySelector('.js-result');
 const btnAc = document.querySelector('.js-btn-ac');
 const btnResult = document.querySelector('.js-btn-result');
 const btnDe = document.querySelectorAll('.js-btn-de');
+const WARRING_MSG = '비활성화 된 버튼입니다.';
 
 // * 세터 게터 구현 및 함수 분할 예정
 
@@ -30,7 +31,7 @@ const acBtnClickHandler = () => {
 };
 
 const warring = () => {
-    alert('비활성화 된 버튼입니다.');
+    alert(WARRING_MSG);
 };
 
 const init = () => {
