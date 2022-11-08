@@ -1,4 +1,6 @@
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll(
+  "button:not(.js-result:not(.js-reset)"
+);
 const displayFormula = document.querySelector(".js-cal-display-formula");
 const display = document.querySelector(".js-cal-display");
 
@@ -8,27 +10,29 @@ const resetButton = document.querySelector(".js-reset");
 const INIT_NUM = "0";
 
 const resultNumber = () => {
-  return (display.innerHTML = eval(display.innerHTML));
+  display.innerHTML = eval(display.innerHTML);
 };
 
 const resetNumber = () => {
-  return (display.innerHTML = INIT_NUM), (displayFormula.innerHTML = INIT_NUM);
+  display.innerHTML = INIT_NUM;
+  displayFormula.innerHTML = INIT_NUM;
 };
 
 const init = () => {
+  resultButton.addEventListener("click", resultNumber);
+  resetButton.addEventListener("click", resetNumber);
   buttons.forEach((value) => {
     value.addEventListener("click", (event) => {
       const { target } = event;
       const { value } = target;
 
       if (displayFormula.innerHTML && display.innerHTML === INIT_NUM) {
-        (displayFormula.innerHTML = value), (display.innerHTML = value);
+        displayFormula.innerHTML = value;
+        display.innerHTML = value;
       } else {
-        (displayFormula.innerHTML += value), (display.innerHTML += value);
+        displayFormula.innerHTML += value;
+        display.innerHTML += value;
       }
-
-      resultButton.addEventListener("click", resultNumber);
-      resetButton.addEventListener("click", resetNumber);
     });
   });
 };
