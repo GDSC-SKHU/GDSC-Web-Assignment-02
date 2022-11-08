@@ -1,7 +1,8 @@
-.box {
+.board {
   width: 430px;
   height: 560px;
   border: solid 2px black;
+  background-color: pink;
 
   padding-bottom: 15px;
   display: flex;
@@ -10,7 +11,7 @@
   justify-content: center;
 }
 
-.result {
+.display {
   width: 378px;
   height: 90px;
   border: solid 2px black;
@@ -20,13 +21,21 @@
   margin-bottom: 2px;
 }
 
+.result {
+  margin-top: 15px;
+}
+
+.calculation {
+  text-align: right;
+  color: beige;
+}
+
 .button {
   width: 90px;
   height: 56px;
   border: solid 2px black;
 
   border-radius: 6px;
-  padding-top: 28px;
   text-align: center;
   font-weight: bold;
   font-size: 19px;
