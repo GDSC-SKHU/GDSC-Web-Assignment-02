@@ -1,27 +1,34 @@
-const OperArray = [];
 /*
-연산자 담을 배열
+=를 갖는 dom요소
 */
-const FindAllOper = document.querySelectorAll('.TypeIsOper');
-FindAllOper.forEach((EachOper) => {
-  OperArray.push(EachOper);
-});
+const FindEqualItem = document.querySelector('.item.OperCalculate');
 /*
-식을 저장할 공간
+수식을 저장할 거임
 */
-
-const FindAllItem = document.querySelectorAll('.item:not(.TypeIsOper)');
+const StoreExpress = document.querySelector('.item.StoreExpresstion');
+/* 
+=가 아닌 item 전부 찾아서 클릭하면 문자열 덧붙임
+*/
+const FindAllItem = document.querySelectorAll('.item:not(.OperCalculate)');
 FindAllItem.forEach((EachItem) => {
   EachItem.addEventListener('click', () => {
-    /*
-    식을 저장할 공간에 덧붙여짐
-    */
     FindAllItem[0].innerHTML += EachItem.innerHTML;
   });
 });
+/*
+AC->누르면 둘 다 초기화 해줌
+*/
+const Init = document.querySelector('.item.OperInit');
+Init.addEventListener('click', () => {
+  FindAllItem[0].innerHTML = '';
+  StoreExpress.innerHTML = '';
+});
 
 /*
-Operator객체의 첫번쨰로는, 연산자만 , 두번쨰로는 모든 요소 전달
+eval의 결과값과 수식 저장
 */
-const Operator = { OperArray, FindAllItem };
-export { Operator };
+FindEqualItem.addEventListener('click', () => {
+  const Result = eval(FindAllItem[0].innerHTML);
+  StoreExpress.innerHTML = '수식:' + FindAllItem[0].innerHTML;
+  FindAllItem[0].innerHTML = '결과:' + Result;
+});
