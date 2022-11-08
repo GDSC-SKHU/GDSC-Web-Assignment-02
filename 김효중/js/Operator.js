@@ -10,7 +10,7 @@ const StoreExpress = document.querySelector('.item.StoreExpresstion');
 =가 아닌 item 전부 찾아서 클릭하면 문자열 덧붙임
 */
 const FindAllItem = document.querySelectorAll('.item:not(.OperCalculate)');
-FindAllItem.forEach((EachItem) => {
+Array.from(FindAllItem).forEach((EachItem) => {
   EachItem.addEventListener('click', () => {
     FindAllItem[0].innerHTML += EachItem.innerHTML;
   });
