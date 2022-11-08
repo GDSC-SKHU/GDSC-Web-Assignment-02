@@ -6,17 +6,13 @@ const btnResult = document.querySelector('.js-btn-result');
 const btnDe = document.querySelectorAll('.js-btn-de');
 const WARRING_MSG = '비활성화 된 버튼입니다.';
 
-// * 세터 게터 구현 및 함수 분할 예정
-
 const btnClickHandler = (e) => {
     const { target } = e;
     if (inputString.innerHTML === '0') {
         inputString.innerHTML = '';
         inputString.innerHTML += target.innerHTML;
-        console.log(target);
     } else {
         inputString.innerHTML += target.innerHTML;
-        console.log(target);
     }
 };
 
