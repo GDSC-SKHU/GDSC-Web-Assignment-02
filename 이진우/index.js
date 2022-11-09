@@ -7,7 +7,7 @@ function add(char){
 
 function calculator(){
     const total = eval(display.value);
-    ou.value = total;
+    output.value = total;
 }
 
 function reset(){
