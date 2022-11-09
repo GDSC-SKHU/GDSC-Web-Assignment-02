@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 2rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+  color: #395144;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #395144;
+}
