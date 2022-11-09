@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="calculator-box">
+        <h1>계산기</h1>
+        <table class="calculator">
+            <tr>
+                <td colspan="4" class="result-in">
+                    <input type="text" class="display js-display">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="result-out">
+                    <input type="text" class="output js-output">
+                </td>
+            </tr>
+            <tr>
+                <td onclick="reset()" class="button">AC</td>
+                <td></td>
+                <td></td>
+                <td onclick="add('/')" class="button">/</td>
+            </tr>
+            <tr>
+                <td onclick="add(7)" class="button">7</td>
+                <td onclick="add(8)" class="button">8</td>
+                <td onclick="add(9)" class="button">9</td>
+                <td onclick="add('*')" class="button">x</td>
+            </tr>
+            <tr>
+                <td onclick="add(4)" class="button">4</td>
+                <td onclick="add(5)" class="button">5</td>
+                <td onclick="add(6)" class="button">6</td>
+                <td onclick="add('-')" class="button">-</td>
+            </tr>
+            <tr>
+                <td onclick="add(1)" class="button">1</td>
+                <td onclick="add(2)" class="button">2</td>
+                <td onclick="add(3)" class="button">3</td>
+                <td onclick="add('+')" class="button">+</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td onclick="add(0)" class="button">0</td>
+                <td onclick="add('.')" class="button">.</td>
+                <td onclick="calculator()" class="button">=</td>
+            </tr>
+
+        </table>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
