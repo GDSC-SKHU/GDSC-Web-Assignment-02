@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.entire_calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 5em);
+  grid-template-rows: repeat(5, 5em);
+  gap: 0.5em;
+}
+
+.result_display :first-child,
+.result_display :nth-child(2) {
+  box-shadow: none;
+}
+
+.result_processing {
+  color: gray;
+}
+.result_wrapper {
+  margin-left: 1em;
+}
+.result_display :nth-child(2) {
+  font-size: 2em;
+}
+.entire_calculator :nth-child(15) {
+  grid-column: 1/4;
+}
+
+.entire_calculator div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.1em 0.1em 0.5em black;
+  border-radius: 1em;
+  background-color: white;
+}
+
+.entire_calculator div:active {
+  transform: translateY(0.3em);
+}
+.entire_calculator div:first-child {
+  grid-column: 1/4;
+  transform: none;
+}
+.entire_calculator div:first-child {
+  flex-direction: column;
+  align-items: start;
+}
+/*background gradient*/
+body {
+  margin: 0px auto;
+  padding: 70px 30px;
+  background: linear-gradient(-45deg, #ebff6f, #88ebee, #e2ad5e, #cc93ee);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
