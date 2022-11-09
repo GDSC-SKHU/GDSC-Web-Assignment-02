@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <div class="entire_calculator">
+      <div class="result_display">
+        <div class="result_wrapper">
+          <div class="result_processing"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+      <div>Ac</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>x</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>-</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>+</div>
+      <div>0</div>
+      <div>=</div>
+    </div>
+    <script>
+      let result = 0;
+      let resultProcessing = 0;
+      const numberList = document.body.querySelectorAll(
+        ".entire_calculator div"
+      );
+
+      numberList[4].addEventListener("click", clear);
+      numberList[5].addEventListener("click", function () {
+        numberRecall("7");
+      });
+      numberList[6].addEventListener("click", function () {
+        numberRecall("8");
+      });
+      numberList[7].addEventListener("click", function () {
+        numberRecall("9");
+      });
+      numberList[8].addEventListener("click", function () {
+        numberRecall("*");
+      });
+      numberList[9].addEventListener("click", function () {
+        numberRecall("4");
+      });
+      numberList[10].addEventListener("click", function () {
+        numberRecall("5");
+      });
+      numberList[11].addEventListener("click", function () {
+        numberRecall("6");
+      });
+      numberList[12].addEventListener("click", function () {
+        numberRecall("-");
+      });
+      numberList[13].addEventListener("click", function () {
+        numberRecall("1");
+      });
+      numberList[14].addEventListener("click", function () {
+        numberRecall("2");
+      });
+      numberList[15].addEventListener("click", function () {
+        numberRecall("3");
+      });
+      numberList[16].addEventListener("click", function () {
+        numberRecall("+");
+      });
+      numberList[17].addEventListener("click", function () {
+        numberRecall("0");
+      });
+      numberList[18].addEventListener("click", function () {
+        myEvalFunc("=");
+      });
+
+      numberList[2].innerHTML = resultProcessing;
+      numberList[3].innerHTML = result;
+
+      function clear() {
+        result = 0;
+        resultProcessing = 0;
+        numberList[2].innerHTML = resultProcessing;
+        numberList[3].innerHTML = result;
+        console.log(result);
+      }
+
+      function numberRecall(number) {
+        if (resultProcessing == 0) {
+          resultProcessing = resultProcessing + eval(number);
+          numberList[2].innerHTML = resultProcessing;
+          numberList[3].innerHTML = result;
+        } else {
+          resultProcessing = resultProcessing + number;
+          numberList[2].innerHTML = resultProcessing;
+          numberList[3].innerHTML = result;
+        }
+      }
+
+      function myEvalFunc(operator) {
+        result = eval(resultProcessing);
+        numberList[3].innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
