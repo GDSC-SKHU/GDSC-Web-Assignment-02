@@ -17,8 +17,8 @@ function equal() {
 
 // AC버튼 클릭 시 reset() 함수 실행
 function reset() {
-  document.querySelector(".js-result").value = "";
-  document.querySelector(".js-input").value = "";
+  resultDisplay.value = "";
+  inputDisplay.value = "";
 }
 
 // del 버튼 클릭 시 del() 함수 실행 slice 사용
