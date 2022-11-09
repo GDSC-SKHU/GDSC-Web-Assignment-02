@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+    <title>calculator</title>
+</head>
+<body>
+    <h1>Eunji's Calculator</h1>
+    <table>
+        <tr>
+            <td colspan="4" class="results">
+                <input type="text" class="js-display" placeholder="숫자와 기호만 입력해 주세요.(문자X)">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="results">
+                <input type="text" class="js-result" placeholder="결과창">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" onclick="reset()" class="makeup">AC</td>
+        </tr>
+        <tr>
+            <!-- html내의 onclick은 js의 eventlistener('click', ~~)와 유사 -->
+            <td onclick="add(7)" class="makeup">7</td>
+            <td onclick="add(8)" class="makeup">8</td>
+            <td onclick="add(9)" class="makeup">9</td>
+            <td onclick="add('/')" class="makeup">/</td>
+        </tr>
+        <tr>
+            <td onclick="add(4)" class="makeup">4</td>
+            <td onclick="add(5)" class="makeup">5</td>
+            <td onclick="add(6)" class="makeup">6</td>
+            <td onclick="add('*')" class="makeup">*</td>
+        </tr>
+        <tr>
+            <td onclick="add(1)" class="makeup">1</td>
+            <td onclick="add(2)" class="makeup">2</td>
+            <td onclick="add(3)" class="makeup">3</td>
+            <td onclick="add('-')" class="makeup">-</td>
+        </tr>
+        <tr>
+            <td onclick="add(0)" class="makeup">0</td>
+            <td onclick="add('.')" class="makeup">.</td>
+            <td onclick="calculate()" class="makeup">=</td>
+            <td onclick="add('+')" class="makeup">+</td>
+        </tr>
+    </table>
+    <script src="calculator.js"></script>
+</body>
+</html>
