@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="calc.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <input readonly type="text" class="display" placeholder="expression"/>
+        <input readonly type="text" class="result" placeholder="result"/>
+        
+        <div class="row">
+          <button class="js-number-7">7</button>
+          <button class="js-number-8">8</button>
+          <button class="js-number-9">9</button>
+          <button class="js-operator-divide">/</button>
+        </div>
+        <div class="row">
+          <button class="js-number-4">4</button>
+          <button class="js-number-5">5</button>
+          <button class="js-number-6">6</button>
+          <button class="js-operator-multi">*</button>
+        </div>
+        <div class="row">
+          <button class="js-number-1">1</button>
+          <button class="js-number-2">2</button>
+          <button class="js-number-3">3</button>
+          <button class="js-operator-minus">-</button>
+        </div>
+        <div class="row">
+          <button class="js-clear">AC</button>
+          <button class="js-number-0">0</button>
+          <button class="js-calculate">=</button>
+          <button class="js-operator-plus">+</button>
+        </div>
+      </div>
+    </div>
+    <script src="./calc.js"></script>
+  </body>
+</html>

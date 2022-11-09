@@ -1,0 +1,75 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  margin-top: 30px;
+  width: 350px;
+  padding: 20px;
+  background-color: #68b881;
+  border-radius: 10px;
+}
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 330px;
+  height: 40px;
+  background-color: #e7e5e5;
+  color: #373c58;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+}
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 330px;
+  height: 40px;
+  background-color: #e7e5e5;
+  color: #373c58;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+}
+
+button {
+  width: 64px;
+  height: 50px;
+  padding: 0;
+  margin: 3px;
+  border: none;
+  background-color: #f2eae3;
+  font-size: 24px;
+  font-weight: bold;
+  transition: all 0.2s;
+  border-radius: 10px;
+}
+button[class^="js-operator"] {
+  background-color: #8fdbd6;
+}
+button[class^="js-operator"]:hover,
+button:hover {
+  background-color: rgb(72, 71, 67);
+  color: #e7e5e5;
+  cursor: pointer;
+}
+.row {
+  text-align: center;
+}
+.js-calculate {
+  background-color: #ff5978;
+}
