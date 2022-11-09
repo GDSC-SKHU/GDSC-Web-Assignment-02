@@ -31,5 +31,84 @@
       <div>0</div>
       <div>=</div>
     </div>
+    <script>
+      let result = 0;
+      let resultProcessing = 0;
+      const numberList = document.body.querySelectorAll(
+        ".entire_calculator div"
+      );
+
+      numberList[4].addEventListener("click", clear);
+      numberList[5].addEventListener("click", function () {
+        numberRecall("7");
+      });
+      numberList[6].addEventListener("click", function () {
+        numberRecall("8");
+      });
+      numberList[7].addEventListener("click", function () {
+        numberRecall("9");
+      });
+      numberList[8].addEventListener("click", function () {
+        numberRecall("*");
+      });
+      numberList[9].addEventListener("click", function () {
+        numberRecall("4");
+      });
+      numberList[10].addEventListener("click", function () {
+        numberRecall("5");
+      });
+      numberList[11].addEventListener("click", function () {
+        numberRecall("6");
+      });
+      numberList[12].addEventListener("click", function () {
+        numberRecall("-");
+      });
+      numberList[13].addEventListener("click", function () {
+        numberRecall("1");
+      });
+      numberList[14].addEventListener("click", function () {
+        numberRecall("2");
+      });
+      numberList[15].addEventListener("click", function () {
+        numberRecall("3");
+      });
+      numberList[16].addEventListener("click", function () {
+        numberRecall("+");
+      });
+      numberList[17].addEventListener("click", function () {
+        numberRecall("0");
+      });
+      numberList[18].addEventListener("click", function () {
+        myEvalFunc("=");
+      });
+
+      numberList[2].innerHTML = resultProcessing;
+      numberList[3].innerHTML = result;
+
+      function clear() {
+        result = 0;
+        resultProcessing = 0;
+        numberList[2].innerHTML = resultProcessing;
+        numberList[3].innerHTML = result;
+        console.log(result);
+      }
+
+      function numberRecall(number) {
+        if (resultProcessing == 0) {
+          resultProcessing = resultProcessing + eval(number);
+          numberList[2].innerHTML = resultProcessing;
+          numberList[3].innerHTML = result;
+        } else {
+          resultProcessing = resultProcessing + number;
+          numberList[2].innerHTML = resultProcessing;
+          numberList[3].innerHTML = result;
+        }
+      }
+
+      function myEvalFunc(operator) {
+        result = eval(resultProcessing);
+        numberList[3].innerHTML = result;
+      }
+    </script>
   </body>
 </html>
